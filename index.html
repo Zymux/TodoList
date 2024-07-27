@@ -19,23 +19,70 @@
 
     <div class="contentContainer">
         <div class="navLeft">
-            <div class="navLeft-list">
-                Project List
+            <div class="navLeft-list" id="projectListContainer">
+                <h2>Project List</h2>
             </div>
         </div>
 
 
         <div class="mainContent">
+
             <div class="bodyTitle">
                 Project Body
             </div>
 
             <div class="bodyList">
-                Project Body List
+                <div id="itemListContainer">
+
+                </div>
             </div>
+
+
+            <div class="buttons">
+                <button class="addProjectBtn" id="addProjectBtn">
+                    Add Project
+                </button>
+    
+                <button class="addItemBtn" id="addItemBtn">
+                    Add Item
+                </button>
+            </div>
+
+
         </div>
     </div>
 
+    <!-- Modal for adding a project -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <h2>Add New Project</h2>
+            <label for="projectTitle">Project Title:</label>
+            <input type="text" id="projectTitle" name="projectTitle">
+            <button id="confirmAddProject">Add Project</button>
+        </div>
+    </div>
+
+    <!-- Modal for adding an item -->
+    <div id="itemModal" class="modal">
+        <div class="modal-content">
+            <span class="closeItemModalBtn">&times;</span>
+            <h2>Add New Item</h2>
+            <label for="itemTitle">Title:</label>
+            <input type="text" id="itemTitle" name="itemTitle">
+            <label for="itemDescription">Description:</label>
+            <textarea id="itemDescription" name="itemDescription"></textarea>
+            <label for="itemPriority">Priority:</label>
+            <select id="itemPriority" name="itemPriority">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button id="confirmAddItem">Add Item</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

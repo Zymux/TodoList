@@ -24,7 +24,7 @@ header {
 }
 
 .navLeft {
-    width: 20%;
+    width: 15%;
     background-color: lightgray;
     box-shadow: 5px 0 5px -5px black;
     padding: 10px;
@@ -49,10 +49,177 @@ header {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    align-items: center;
 }
 
-.bodyTitle, .bodyList {
-    background-color: rgb(184, 184, 184);
+
+
+.bodyTitle {
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.bodyList {
     margin: 20px 0;
     padding: 10px;
+    max-width: 100%;
 }
+
+
+
+#itemListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between items */
+}
+
+.item {
+    background-color: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.item-title {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    font-size: large;
+}
+
+.item-description {
+    margin-top: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+.item-priority {
+    margin-top: 5px;
+    text-align: left;
+    width: 100%;
+}
+
+
+
+.buttons {
+    justify-content: horizontal;
+    align-items: horizontal;
+}
+.addProjectBtn, .addItemBtn {
+    background-color: gray;
+    border: none;
+    color: white;
+    padding: 10px 10px; /* Padding for spacing */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    font-weight: 5;
+    max-width: 100%; /* Ensures it doesn't overflow */
+}
+
+.addProjectBtn:hover, .addItemBtn:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+
+
+.navLeft-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Ensure items stretch to the full width of the parent */
+    padding: 10px;
+    box-sizing: border-box;
+    gap: 10px; /* Add a gap between the items */
+}
+
+.project-item {
+    background-color: gray;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    border-radius: 15px;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+
+}
+
+.project-item:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    /* align-items: center; */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.closeBtn, .closeItemModalBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeBtn:hover, .closeItemModalBtn:hover,
+.closeBtn:focus, .closeItemModalBtn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#confirmAddProject, #confirmAddItem {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
